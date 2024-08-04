@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 
 class Crawler:
-    
+    """This class requests the data from HackerNews and store the data into a file using csv format."""    
 
     def get_entries(self, website: str):
         
@@ -13,7 +13,6 @@ class Crawler:
             url=website
 
         response=requests.get(url,headers=headers)
-
 
         soup=BeautifulSoup(response.content,'lxml')
 
@@ -26,6 +25,10 @@ class Crawler:
 
                 if entry.select('.hnuser'):
                     print(title + ";" + entry.select('.score')[0].get_text() + ";" + entry.find_all('a')[3].get_text(), file=f)
+                
+                """Storing the data requested from Beautiful Soup using csv format.
+                Possible situation: It could be possible to find a HackerNews entry that contains one or more commas.
+                Solution: We decide to use a different character delimiter (;)."""
 
             except Exception as e:
                 raise e

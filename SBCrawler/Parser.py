@@ -10,7 +10,7 @@ class Parser():
             for lines in csv_file:
                 list_entries.append(lines)
 
-            list_entries.pop(0)
+            list_entries.pop(0) #Removing duplicated
             return list_entries
 
     def format_entries(self):
@@ -27,15 +27,18 @@ class Parser():
         dictionary_list = []
 
         counter = 0
-        for i in range(0,len(list_data)):
+        for i in range(0,len(list_data)): 
+            """Storing the information into a list of dictionaries. The access to each key element into the dictionary has a cost of O(1).
+                In the worst case, to look for an element has a cost of O(n)
+            """
             counter += 1
             dict_entry["number"] = counter
             dict_entry["title"] = list_data[i][0]
 
-            list_data[i][1] = ' '.join(list_data[i][1].split())
+            list_data[i][1] = ' '.join(list_data[i][1].split()) #Cleaning the string
             dict_entry["score"] = int(list_data[i][1].split(' ')[0])
             list_data[i][2] = ' '.join(list_data[i][2].split())
-            if "comments" in list_data[i][2]:
+            if "comments" in list_data[i][2]: #comments can get a integer value and a string value ("discuss").
                 dict_entry["comments"] = int(list_data[i][2].split(' ')[0])
             else:
                 dict_entry["comments"] = list_data[i][2]
