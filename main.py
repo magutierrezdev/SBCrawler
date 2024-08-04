@@ -7,8 +7,10 @@ def main():
     obj_crawler = Crawler()
     obj_crawler.get_entries(website=link)  #Get data from HackerNews and store them  
     
+    list_parsed_data = [] 
     obj_parser = Parser()    
-    obj_parser.format_entries()
+    list_parsed_data = obj_parser.format_entries()
+    
 
 
     
