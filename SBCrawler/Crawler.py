@@ -22,11 +22,10 @@ class Crawler:
             try:
                 #print(item)
                 if entry.select('.titleline > a'):
-                    print(entry.select('.titleline > a')[0].get_text(), file=f)
+                    title = entry.select('.titleline > a')[0].get_text()                    
 
                 if entry.select('.hnuser'):
-                    print(entry.select('.score')[0].get_text(), file=f)
-                    print(entry.find_all('a')[3].get_text(), file=f)
+                    print(title + ";" + entry.select('.score')[0].get_text() + ";" + entry.find_all('a')[3].get_text(), file=f)
 
             except Exception as e:
                 raise e
