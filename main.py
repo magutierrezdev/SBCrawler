@@ -21,9 +21,10 @@ def main():
     
     order = "max"
     
-    print(obj_filter.get_more_five_words_ordered_comments(order))
+    #print(obj_filter.get_more_five_words_ordered_comments(order))
 
-    
+
+    #print(obj_filter.get_less_five_words_ordered_points(order))
 
 
 

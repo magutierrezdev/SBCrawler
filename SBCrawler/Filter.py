@@ -40,4 +40,21 @@ class Filter():
         
         #print(entries)
 
+
+    def get_less_five_words_ordered_points(self,order):
+        obj_parser = Parser()    
+        list_parsed_data = obj_parser.set_format_entries()
+        filtered_list = []
+        for i in list_parsed_data:
+            if self.count_words(i.get('title')) <= 5:
+                self.get_entry(i,filtered_list)
+        #for i in filtered_list:
+        #    print(i)
+        if order == "max":
+            entries = sorted(filtered_list, key=lambda x: -x[2]) #entries ordered from highest to lowest number of comments.
+        if order == "min":
+            entries = sorted(filtered_list, key=lambda x: x[2]) #entries ordered from lowest to highest number of comments.
+        
+        return entries
+
         
