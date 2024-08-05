@@ -13,8 +13,8 @@ def launching_crawler():
     print("Done\n")
 
 def get_user_choice():
-    print("Please, write 1 if you wish to filter by words more than five words and ordered by comments")
-    print("Or write 2 if you wish to filter by words less than five words and ordered by points")
+    print("Please, write 1 if you wish to filter entries with more than five words in the title ordered by the number of comments first")
+    print("Or write 2 if you wish to filter by entries with less than or equal to five words in the title ordered by points")
     print("Or write 3 to execute all the filters")
     choice = str(input())
     return choice
@@ -24,35 +24,40 @@ def show_results(one_list):
         print(i)
 
 def get_user_selection():
-    print("Please write max, you want to order by highest to lower or write min if you want to order by lowest to highest\n")
+    print("Please write max, if you want to order by highest to lowest number of comments or write min if you want to order by lowest to highest number of comments\n")
     choice = str(input())
     return choice
 
 def filters_execution():
     obj_filter = Filter()
+    legend = "Number - Title - Points - Comments"
     choice = get_user_choice()
     if choice == "1" or choice == "2" or choice == "3":            
         order = get_user_selection()
         if order == "min" or order == "max":       
-            if choice == "1":        
+            if choice == "1":
+                print("\n" + legend)        
                 show_results(obj_filter.get_more_five_words_ordered_comments(order))
-                logging.info('filter by words more than five words and ordered by comments selected')
+                logging.info('filter entries with more than five words in the title ordered by the number of comments first selected')
             if choice == "2":
+                print("\n" + legend)
                 show_results(obj_filter.get_less_five_words_ordered_points(order))
-                logging.info('filter by words less or equal than five words and ordered by points selected')
+                logging.info('filter by entries entries with less than or equal to five words in the title ordered by points selected')
             if choice == "3":
-                print("\nFiltering by words more than five words and ordered by comments")
-                print("-------------------------------------------------------------")
+                print("\nFiltering by entries with more than five words in the title ordered by the number of comments first")
+                print("-----------------------------------------------------------------------------------------------------")
+                print(legend)
                 show_results(obj_filter.get_more_five_words_ordered_comments(order))
-                logging.info('filter by words more than five words and ordered by comments selected')
-                print("\nFiltering by words less or equal than five words and ordered by points")
-                print("-------------------------------------------------------------")
+                logging.info('filter entries with more than five words in the title ordered by the number of comments first selected')
+                print("\nFiltering by entries with less than or equal to five words in the title ordered by points")
+                print("--------------------------------------------------------------------------------------------")
+                print(legend)
                 show_results(obj_filter.get_less_five_words_ordered_points(order))
-                logging.info('filter by words less or equal than five words and ordered by points selected')                
+                logging.info('filter by entries with less than or equal to five words in the title ordered by points selected')                
         else:
             logging.error('User has written an incorrect filter order: ' + str(order))    
     else:
-        logging.error('User has written an incorrect choices: ' + str(choice))
+        logging.error('User has written an incorrect choice: ' + str(choice))
 
 
 

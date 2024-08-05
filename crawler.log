@@ -28,3 +28,50 @@
 2024-08-05 20:25:43 INFO     Crawler launched
 2024-08-05 20:25:47 INFO     filter by words more than five words and ordered by comments selected
 2024-08-05 20:25:47 INFO     filter by words less than five words and ordered by points selected
+2024-08-05 20:29:03 INFO     Crawler launched
+2024-08-05 20:31:08 INFO     Crawler launched
+2024-08-05 20:32:43 INFO     Crawler launched
+2024-08-05 20:33:20 INFO     Crawler launched
+2024-08-05 20:34:59 INFO     Crawler launched
+2024-08-05 20:35:06 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:35:19 INFO     Crawler launched
+2024-08-05 20:35:22 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:35:41 INFO     Crawler launched
+2024-08-05 20:35:44 INFO     filter by entries entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:36:02 INFO     Crawler launched
+2024-08-05 20:36:05 INFO     filter by entries entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:36:18 INFO     Crawler launched
+2024-08-05 20:36:27 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:36:27 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:36:44 INFO     Crawler launched
+2024-08-05 20:36:49 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:36:49 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:38:21 INFO     Crawler launched
+2024-08-05 20:38:25 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:38:25 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:39:21 INFO     Crawler launched
+2024-08-05 20:39:23 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:39:32 INFO     Crawler launched
+2024-08-05 20:39:34 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:39:34 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:40:00 INFO     Crawler launched
+2024-08-05 20:40:03 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:40:03 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:40:13 INFO     Crawler launched
+2024-08-05 20:40:14 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:41:40 INFO     Crawler launched
+2024-08-05 20:41:43 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:41:56 INFO     Crawler launched
+2024-08-05 20:41:59 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:41:59 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:42:43 INFO     Crawler launched
+2024-08-05 20:42:45 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:43:08 INFO     Crawler launched
+2024-08-05 20:43:09 INFO     filter by entries entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:43:15 INFO     Crawler launched
+2024-08-05 20:43:20 INFO     filter entries with more than five words in the title ordered by the number of comments first selected
+2024-08-05 20:43:20 INFO     filter by entries with less than or equal to five words in the title ordered by points selected
+2024-08-05 20:44:10 INFO     Crawler launched
+2024-08-05 20:44:13 ERROR    User has written an incorrect choices: 54
+2024-08-05 20:45:01 INFO     Crawler launched
+2024-08-05 20:45:37 ERROR    User has written an incorrect filter order: equal
