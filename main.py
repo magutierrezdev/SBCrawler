@@ -1,5 +1,6 @@
 from SBCrawler.Crawler import Crawler
 from SBCrawler.Parser import Parser
+from SBCrawler.Filter import Filter
 
 def main():    
 
@@ -9,8 +10,21 @@ def main():
     
     list_parsed_data = [] 
     obj_parser = Parser()    
-    list_parsed_data = obj_parser.format_entries()
+    list_parsed_data = obj_parser.set_format_entries()
     
+    """
+    for i in list_parsed_data:
+        print(i)
+    """    
+
+    obj_filter = Filter()
+    
+    order = "max"
+    
+    print(obj_filter.get_more_five_words_ordered_comments(order))
+
+    
+
 
 
     

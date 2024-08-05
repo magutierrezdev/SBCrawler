@@ -13,7 +13,7 @@ class Parser():
             list_entries.pop(0) #Removing duplicated
             return list_entries
 
-    def format_entries(self):
+    def set_format_entries(self):
         
         list_data = self.load_file('results.txt')
 
@@ -38,7 +38,7 @@ class Parser():
             list_data[i][1] = ' '.join(list_data[i][1].split()) #Cleaning the string
             dict_entry["score"] = int(list_data[i][1].split(' ')[0])
             list_data[i][2] = ' '.join(list_data[i][2].split())
-            if "comments" in list_data[i][2]: #comments can get a integer value and a string value ("discuss").
+            if "comments" in list_data[i][2] or "comment" in list_data[i][2]: #comments can get a integer value and a string value ("discuss").
                 dict_entry["comments"] = int(list_data[i][2].split(' ')[0])
             else:
                 dict_entry["comments"] = list_data[i][2]
