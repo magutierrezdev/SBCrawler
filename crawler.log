@@ -18,3 +18,13 @@
 2024-08-05 20:07:41 ERROR    User has written an incorrect filter order: testing_choice
 2024-08-05 20:08:16 INFO     Crawler launched
 2024-08-05 20:08:22 ERROR    User has written an incorrect filter order: ¿
+2024-08-05 20:23:35 INFO     Crawler launched
+2024-08-05 20:23:41 INFO     filter by words more than five words and ordered by comments selected
+2024-08-05 20:24:32 INFO     Crawler launched
+2024-08-05 20:24:36 INFO     filter by words more than five words and ordered by comments selected
+2024-08-05 20:25:03 INFO     Crawler launched
+2024-08-05 20:25:11 INFO     filter by words more than five words and ordered by comments selected
+2024-08-05 20:25:11 INFO     filter by words less than five words and ordered by points selected
+2024-08-05 20:25:43 INFO     Crawler launched
+2024-08-05 20:25:47 INFO     filter by words more than five words and ordered by comments selected
+2024-08-05 20:25:47 INFO     filter by words less than five words and ordered by points selected

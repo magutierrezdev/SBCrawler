@@ -19,6 +19,10 @@ def get_user_choice():
     choice = str(input())
     return choice
 
+def show_results(one_list):
+    for i in one_list:
+        print(i)
+
 def get_user_selection():
     print("Please write max, you want to order by highest to lower or write min if you want to order by lowest to highest\n")
     choice = str(input())
@@ -31,20 +35,20 @@ def filters_execution():
         order = get_user_selection()
         if order == "min" or order == "max":       
             if choice == "1":        
-                print(obj_filter.get_more_five_words_ordered_comments(order))
+                show_results(obj_filter.get_more_five_words_ordered_comments(order))
                 logging.info('filter by words more than five words and ordered by comments selected')
             if choice == "2":
-                print(obj_filter.get_less_five_words_ordered_points(order))
-                logging.info('filter by words less than five words and ordered by points selected')
+                show_results(obj_filter.get_less_five_words_ordered_points(order))
+                logging.info('filter by words less or equal than five words and ordered by points selected')
             if choice == "3":
                 print("\nFiltering by words more than five words and ordered by comments")
                 print("-------------------------------------------------------------")
-                print(obj_filter.get_more_five_words_ordered_comments(order))
+                show_results(obj_filter.get_more_five_words_ordered_comments(order))
                 logging.info('filter by words more than five words and ordered by comments selected')
-                print("\nFiltering by words less than five words and ordered by points")
+                print("\nFiltering by words less or equal than five words and ordered by points")
                 print("-------------------------------------------------------------")
-                print(obj_filter.get_less_five_words_ordered_points(order))
-                logging.info('filter by words less than five words and ordered by points selected')                
+                show_results(obj_filter.get_less_five_words_ordered_points(order))
+                logging.info('filter by words less or equal than five words and ordered by points selected')                
         else:
             logging.error('User has written an incorrect filter order: ' + str(order))    
     else:
