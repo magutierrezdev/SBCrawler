@@ -29,7 +29,7 @@ class Parser():
         counter = 0
         for i in range(0,len(list_data)): 
             """Storing the information into a list of dictionaries. The access to each key element into the dictionary has a cost of O(1).
-                In the worst case, to look for an element has a cost of O(n)
+                In the worst case, to look for an element into the list has a cost of O(n)
             """
             counter += 1
             dict_entry["number"] = counter
@@ -46,8 +46,3 @@ class Parser():
             dictionary_list.append(dict_entry.copy())
         return dictionary_list
 
-        """
-        for i in dictionary_list:
-            for k,v in i.items():        #acedemos a cada llave(k), valor(v) de cada diccionario
-                print(k, v)
-        """

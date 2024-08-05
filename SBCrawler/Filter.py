@@ -7,7 +7,7 @@ class Filter():
        words = re.findall(r'\b\w+\b', text) 
        return len(words)
 
-    def get_entry(self,dict_entry, values_list):
+    def get_entry(self,dict_entry, values_list): #Receive an dictionary and insert its values into a list to store it into a list of lists (values_list)
         value_list = []
         value_list.append(dict_entry.get('number'))
         value_list.append(dict_entry.get('title'))
@@ -27,7 +27,7 @@ class Filter():
         list_parsed_data = obj_parser.set_format_entries()
         filtered_list = []
         for i in list_parsed_data:
-            if self.count_words(i.get('title')) > 5:
+            if self.count_words(i.get('title')) > 5: #Filtering by title words len
                 self.get_entry(i,filtered_list)
 
         if order == "max":
@@ -43,7 +43,7 @@ class Filter():
         list_parsed_data = obj_parser.set_format_entries()
         filtered_list = []
         for i in list_parsed_data:
-            if self.count_words(i.get('title')) <= 5:
+            if self.count_words(i.get('title')) <= 5: #Filtering by title words len
                 self.get_entry(i,filtered_list)
         if order == "max":
             entries = sorted(filtered_list, key=lambda x: -x[2]) #entries ordered from highest to lowest number of comments.
